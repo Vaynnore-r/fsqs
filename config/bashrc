@@ -1,0 +1,39 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+  for rc in ~/.bashrc.d/*; do
+    if [ -f "$rc" ]; then
+      . "$rc"
+    fi
+  done
+fi
+unset rc
+
+## TTY welcome message
+echo "Sauron OS Fast and Reliable"
+echo
+## Add aliases below.
+alias essh='sudo systemctl start gdm'
+alias essh='sudo systemctl enable --now ssh'
+alias dins='sudo dnf install --assumeyes'
+alias drm='sudo apt remove --assumeyes'
+alias dupd='sudo dnf update --assumeyes'
+alias darm='sudo dnf autoremove --assumeyes'
+alias dclr='sudo dnf clean all --assumeyes'
+alias sins='sudo snap install '
+alias srm='sudo snap remove'
