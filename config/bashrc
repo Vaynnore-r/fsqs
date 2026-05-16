@@ -31,7 +31,7 @@ echo
 alias gnome='sudo systemctl start gdm'
 alias essh='sudo systemctl enable --now ssh'
 alias dins='sudo dnf install --assumeyes'
-alias drm='sudo apt remove --assumeyes'
+alias drm='sudo dnf remove --assumeyes'
 alias dupd='sudo dnf update --assumeyes'
 alias darm='sudo dnf autoremove --assumeyes'
 alias dclr='sudo dnf clean all --assumeyes'
