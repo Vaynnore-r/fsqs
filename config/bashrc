@@ -28,7 +28,7 @@ unset rc
 echo "Sauron OS Fast and Reliable"
 echo
 ## Add aliases below.
-alias essh='sudo systemctl start gdm'
+alias gnome='sudo systemctl start gdm'
 alias essh='sudo systemctl enable --now ssh'
 alias dins='sudo dnf install --assumeyes'
 alias drm='sudo apt remove --assumeyes'
