@@ -25,15 +25,15 @@ fi
 unset rc
 
 ## TTY welcome message
-echo "Sauron OS Fast and Reliable"
+echo "Fedora Sauron Fast and Reliable"
 echo
 ## Add aliases below.
-alias gnome='sudo systemctl start gdm'
 alias essh='sudo systemctl enable --now ssh'
-alias dins='sudo dnf install --assumeyes'
-alias drm='sudo dnf remove --assumeyes'
-alias dupd='sudo dnf update --assumeyes'
-alias darm='sudo dnf autoremove --assumeyes'
-alias dclr='sudo dnf clean all --assumeyes'
+alias dins='sudo dnf install -y'
+alias drm='sudo dnf remove -y'
+alias dupd='sudo dnf update -y'
+alias dclr='sudo dnf clean all -y'
 alias sins='sudo snap install '
 alias srm='sudo snap remove'
+alias fastf='fastfetch --config ~/data/etc/fastf/idt/idiot.jsonc'
+alias ppo='codium' 
